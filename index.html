@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Ailton Alejandro Gonzalez Barajas</title>
+    <meta name="description" content="CV interactivo de Ailton Alejandro Gonzalez Barajas: estudiante de Tecnologías de la Información y desarrollador (Python, Kotlin, Firebase, IoT).">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Open Graph (vista previa al compartir el enlace) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CV | Ailton Alejandro Gonzalez Barajas">
+    <meta property="og:description" content="Estudiante de TI y desarrollador. Proyectos de IoT, apps móviles y web.">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Google Fonts: Orbitron (HUD/títulos), Bebas Neue (nombre), Inter (cuerpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Capas de fondo: scanlines, ruido y línea de escáner (decorativas) -->
+    <div id="bg-overlays" aria-hidden="true">
+        <div id="scanlines"></div>
+        <div id="noise-layer"></div>
+        <div id="scanner-line"></div>
+    </div>
+
+    <div id="app-container">
+
+        <!-- Sidebar HUD de navegación -->
+        <aside id="hud-sidebar">
+            <button type="button" class="hud-logo" aria-label="Ir al inicio">
+                <span>AG</span>
+            </button>
+            <nav id="hud-nav" aria-label="Secciones del CV">
+                <button type="button" class="nav-item active" data-target="page1" aria-label="Perfil profesional" aria-current="page">
+                    <span class="nav-number">01</span>
+                    <span class="nav-label">Perfil</span>
+                    <span class="nav-indicator"></span>
+                </button>
+                <div class="nav-connector" id="conn-1-2" aria-hidden="true"></div>
+                <button type="button" class="nav-item" data-target="page2" aria-label="Educación y habilidades">
+                    <span class="nav-number">02</span>
+                    <span class="nav-label">Edu</span>
+                    <span class="nav-indicator"></span>
+                </button>
+                <div class="nav-connector" id="conn-2-3" aria-hidden="true"></div>
+                <button type="button" class="nav-item" data-target="page3" aria-label="Experiencia y proyectos">
+                    <span class="nav-number">03</span>
+                    <span class="nav-label">Exp</span>
+                    <span class="nav-indicator"></span>
+                </button>
+            </nav>
+            <span class="hud-status" aria-hidden="true">SYS·ONLINE</span>
+        </aside>
+
+        <!-- Área de contenido -->
+        <main id="content-area">
+
+            <!-- ========== PÁGINA 1: PERFIL PROFESIONAL ========== -->
+            <section class="view active" id="page1" aria-label="Perfil profesional">
+                <div class="section-header">
+                    <span class="bracket" aria-hidden="true">[</span>
+                    <h2 class="title-text">Perfil <span class="title-accent">Profesional</span></h2>
+                    <span class="bracket" aria-hidden="true">]</span>
+                    <div class="header-line"></div>
+                </div>
+                <div class="profile-layout">
+                    <div class="profile-avatar-zone">
+                        <div class="avatar-hex" aria-hidden="true">
+                            <span class="initials">AG</span>
+                        </div>
+                        <span class="avatar-tag">CV · 2026</span>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name">Ailton Alejandro<br>Gonzalez Barajas</h1>
+                        <p class="profile-subtitle">TI Professional · Developer</p>
+
+                        <div class="contact-card">
+                            <div class="contact-item">
+                                <span class="ci-icon" aria-hidden="true">◈</span> Tizayuca, Hidalgo
+                            </div>
+                            <div class="contact-item">
+                                <span class="ci-icon" aria-hidden="true">☏</span> 55 7558 4838
+                            </div>
+                            <div class="contact-item">
+                                <span class="ci-icon" aria-hidden="true">✉</span> <a href="mailto:aleg50103@gmail.com">aleg50103@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="ci-icon" aria-hidden="true">↗</span> <a href="https://linkedin.com/in/alejandro-barajas-652b26367" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </div>
+                            <div class="contact-item contact-item--wide">
+                                <span class="ci-icon" aria-hidden="true">⌨</span> <a href="https://github.com/Ailton501" target="_blank" rel="noopener noreferrer">github.com/Ailton501</a>
+                            </div>
+                        </div>
+
+                        <div class="profile-card">
+                            <span class="card-label">▸ Resumen Ejecutivo</span>
+                            <p>
+                                Estudiante de los últimos semestres de la Licenciatura en Tecnologías de la Información con sólida motivación para incursionar en el campo tecnológico a través de prácticas profesionales. Apasionado por el desarrollo de software, la resolución de problemas y la creación de soluciones prácticas. Busco una oportunidad para aplicar mis conocimientos académicos, desarrollarme profesionalmente dentro de un equipo dinámico y, a futuro, consolidar una carrera a largo plazo en la empresa.
+                            </p>
+                        </div>
+
+                        <button type="button" class="print-btn" id="print-btn">↓ Guardar como PDF</button>
+                    </div>
+                </div>
+                <div class="content-footer">
+                    <span>PÁGINA 01 / 03</span>
+                    <span>ÚLTIMA ACTUALIZACIÓN: 2026</span>
+                </div>
+            </section>
+
+            <!-- ========== PÁGINA 2: EDUCACIÓN Y HABILIDADES ========== -->
+            <section class="view" id="page2" aria-label="Educación y habilidades">
+                <div class="section-header">
+                    <span class="bracket" aria-hidden="true">[</span>
+                    <h2 class="title-text">Educación & <span class="title-accent">Skills</span></h2>
+                    <span class="bracket" aria-hidden="true">]</span>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="edu-block">
+                    <p class="edu-degree">Licenciatura en Tecnologías de la Información</p>
+                    <p class="edu-school">Escuela Superior Tizayuca (ESTi) – UAEH</p>
+                    <p class="edu-date">Enero 2022 – Diciembre 2026 (Esperado)</p>
+                    <div class="edu-highlight">
+                        ★ Participación en múltiples ediciones de la competencia internacional de programación algorítmica <strong>ICPC</strong>.
+                    </div>
+                </div>
+
+                <div class="section-header section-header--sub">
+                    <span class="bracket" aria-hidden="true">&lt;</span>
+                    <h3 class="title-text">Hard Skills</h3>
+                    <span class="bracket" aria-hidden="true">/&gt;</span>
+                    <div class="header-line"></div>
+                </div>
+                <div class="skills-grid" id="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-label"><span>Python</span><span class="skill-pct">80%</span></div>
+                        <div class="skill-bar-track" role="progressbar" aria-label="Python" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><div class="skill-bar-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label"><span>Kotlin</span><span class="skill-pct">65%</span></div>
+                        <div class="skill-bar-track" role="progressbar" aria-label="Kotlin" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"><div class="skill-bar-fill" data-width="65"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label"><span>HTML / CSS</span><span class="skill-pct">85%</span></div>
+                        <div class="skill-bar-track" role="progressbar" aria-label="HTML y CSS" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"><div class="skill-bar-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label"><span>Firebase</span><span class="skill-pct">70%</span></div>
+                        <div class="skill-bar-track" role="progressbar" aria-label="Firebase" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><div class="skill-bar-fill" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label"><span>XAMPP</span><span class="skill-pct">60%</span></div>
+                        <div class="skill-bar-track" role="progressbar" aria-label="XAMPP" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><div class="skill-bar-fill" data-width="60"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label"><span>Git / GitHub</span><span class="skill-pct">75%</span></div>
+                        <div class="skill-bar-track" role="progressbar" aria-label="Git y GitHub" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75"><div class="skill-bar-fill" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label"><span>ESP32 / Hardware</span><span class="skill-pct">55%</span></div>
+                        <div class="skill-bar-track" role="progressbar" aria-label="ESP32 y hardware" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><div class="skill-bar-fill" data-width="55"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label"><span>LEGO SPIKE Prime</span><span class="skill-pct">50%</span></div>
+                        <div class="skill-bar-track" role="progressbar" aria-label="LEGO SPIKE Prime" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><div class="skill-bar-fill" data-width="50"></div></div>
+                    </div>
+                </div>
+
+                <p class="soft-label">▸ Soft Skills</p>
+                <div class="soft-skills-row">
+                    <span class="soft-tag">Pensamiento Analítico</span>
+                    <span class="soft-tag">Resolución de Problemas</span>
+                    <span class="soft-tag">Adaptabilidad</span>
+                    <span class="soft-tag">Aprendizaje Continuo</span>
+                    <span class="soft-tag">Comunicación Asertiva</span>
+                    <span class="soft-tag">Servicio al Cliente</span>
+                </div>
+
+                <div class="lang-badge">
+                    <span class="lang-dot" aria-hidden="true"></span> Inglés — Nivel B1 (Intermedio)
+                </div>
+                <div class="content-footer">
+                    <span>PÁGINA 02 / 03</span>
+                    <span>COMPETENCIAS TÉCNICAS</span>
+                </div>
+            </section>
+
+            <!-- ========== PÁGINA 3: PROYECTOS Y EXPERIENCIA ========== -->
+            <section class="view" id="page3" aria-label="Proyectos y experiencia">
+                <div class="section-header">
+                    <span class="bracket" aria-hidden="true">[</span>
+                    <h2 class="title-text">Proyectos & <span class="title-accent">Experiencia</span></h2>
+                    <span class="bracket" aria-hidden="true">]</span>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="proj-header">
+                        <h3 class="proj-title">Sistema de Monitoreo IoT</h3>
+                        <span class="proj-date">2024 – 2026</span>
+                    </div>
+                    <p class="proj-desc">Creación de una pulsera inteligente para adultos mayores capaz de monitorear signos vitales y detectar riesgos. Integración de ESP32 y sensores MAX30102. App móvil en Kotlin para recepción de alertas.</p>
+                    <div class="proj-tech">
+                        <span>ESP32</span><span>MAX30102</span><span>Kotlin</span><span>IoT</span><span>Firebase</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="proj-header">
+                        <h3 class="proj-title">Plataforma Web "Technol"</h3>
+                        <span class="proj-date">2025</span>
+                    </div>
+                    <p class="proj-desc">Aplicación web con sistema de registro de usuarios, dashboard y gestión de cuentas utilizando Firebase para autenticación y base de datos en tiempo real.</p>
+                    <div class="proj-tech">
+                        <span>HTML/CSS</span><span>JavaScript</span><span>Firebase Auth</span><span>Firestore</span>
+                    </div>
+                </div>
+
+                <div class="section-header section-header--sub">
+                    <span class="bracket" aria-hidden="true">&lt;</span>
+                    <h3 class="title-text">Experiencia Laboral</h3>
+                    <span class="bracket" aria-hidden="true">/&gt;</span>
+                    <div class="header-line"></div>
+                </div>
+                <div class="exp-timeline">
+                    <div class="exp-item">
+                        <p class="exp-role">Desarrollador Web Freelance</p>
+                        <p class="exp-company">Independiente</p>
+                        <p class="exp-date">Presente</p>
+                        <p class="exp-desc">Diseño y desarrollo de páginas web responsivas enfocadas en catálogos digitales para clientes independientes.</p>
+                    </div>
+                    <div class="exp-item">
+                        <p class="exp-role">Asesor Inmobiliario</p>
+                        <p class="exp-company">CESVIN</p>
+                        <p class="exp-date">Junio 2023 – Febrero 2025</p>
+                        <p class="exp-desc">Atención al cliente, gestión de cartera, negociación y asesoramiento.</p>
+                    </div>
+                </div>
+                <div class="content-footer">
+                    <span>PÁGINA 03 / 03</span>
+                    <span>PROYECTOS & TRAYECTORIA</span>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
